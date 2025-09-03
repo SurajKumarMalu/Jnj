@@ -1,0 +1,19 @@
+{
+  "xsappname": "XSUAA_Authentication",   
+  "tenant-mode": "shared",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.User",
+      "description": "Default user scope"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "UserRole",
+      "description": "Basic User Role",
+      "scope-references": [
+        "$XSAPPNAME.User"
+      ]
+    }
+  ]
+}
