@@ -24,7 +24,7 @@ public class GetUser implements EventHandler {
     public void onGetCurrentUser(CdsReadEventContext context) {
         Map<String, Object> currentUser = Map.of(
             "id", userInfo.getName(),       
-            "email", userInfo.getEmail(),   
+         //   "email", userInfo.getEmail(),   
             "tenant", userInfo.getTenant(), 
             "roles", userInfo.getRoles()    
         );
