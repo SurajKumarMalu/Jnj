@@ -23,10 +23,10 @@ public class GetUser implements EventHandler {
      @On(event = "getCurrentUser")
     public void onGetCurrentUser(CdsReadEventContext context) {
         Map<String, Object> currentUser = Map.of(
-            "id", userInfo.getName(),       // unique user ID
-           // "email", userInfo.getEmail(),   // email from token
-            "tenant", userInfo.getTenant(), // subaccount tenant
-            "roles", userInfo.getRoles()    // assigned role names
+            "id", userInfo.getName(),       
+            "email", userInfo.getEmail(),   
+            "tenant", userInfo.getTenant(), 
+            "roles", userInfo.getRoles()    
         );
         context.setResult(List.of(currentUser));
     }
